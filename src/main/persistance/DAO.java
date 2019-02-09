@@ -9,9 +9,9 @@ public interface DAO<ID, T> {
 
     List<T> getAll();
 
-    void save(T entity);
+    void add(T entity);
 
     void update(ID id, T newEntity);
 
-    void delete(ID id);
+    void remove(ID id);
 }

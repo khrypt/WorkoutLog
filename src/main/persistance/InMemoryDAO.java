@@ -19,7 +19,7 @@ public class InMemoryDAO<ID, T extends HasID<ID>> implements DAO<ID, T> {
     }
 
     @Override
-    public void save(T entity) {
+    public void add(T entity) {
         entities.put(entity.getID(), entity);
     }
 
@@ -29,7 +29,7 @@ public class InMemoryDAO<ID, T extends HasID<ID>> implements DAO<ID, T> {
     }
 
     @Override
-    public void delete(ID id) {
+    public void remove(ID id) {
         entities.remove(id);
     }
 }
